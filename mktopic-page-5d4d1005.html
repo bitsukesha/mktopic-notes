@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mk体育 · 运动视野杂志</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ef;
+      font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+      color: #3b3732;
+      line-height: 1.75;
+      padding: 2.5rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #d6cec1;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #2b2a27;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #7a7165;
+      font-style: italic;
+      border-left: 3px solid #c4b8a8;
+      padding-left: 1.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .hero .sub em {
+      font-style: normal;
+      color: #9c4a2e;
+    }
+
+    .backstory {
+      background: #ece7df;
+      padding: 2rem 2rem 1.8rem;
+      border-radius: 12px;
+      margin-bottom: 2.8rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .backstory h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #4a4137;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px dashed #b9ae9e;
+      padding-bottom: 0.4rem;
+    }
+
+    .backstory p {
+      margin-bottom: 1.2rem;
+    }
+
+    .backstory .quote-block {
+      background: #f2ede5;
+      border-left: 4px solid #b2947a;
+      padding: 1rem 1.5rem;
+      margin: 1.4rem 0 0.8rem;
+      font-style: italic;
+      color: #4f4940;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #fffffffa;
+      padding: 2rem 2.2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      border: 1px solid #e2d9ce;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #554b3f;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+      border-bottom: 2px solid #d4c1ae;
+      padding-bottom: 2px;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+    }
+
+    .highlight-box {
+      background: #efe9e1;
+      padding: 1.2rem 1.8rem;
+      border-radius: 8px;
+      margin: 1.4rem 0 0.2rem;
+      font-size: 0.95rem;
+      border: 1px solid #dccfc0;
+    }
+
+    .highlight-box strong {
+      color: #7d5e44;
+      font-weight: 500;
+    }
+
+    .faq-note {
+      background: #f6f1ea;
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+      margin: 2.8rem 0 1.5rem;
+      border: 1px solid #d3c8ba;
+    }
+
+    .faq-note h3 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #4b4238;
+    }
+
+    .faq-note details {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px dotted #cbbfb0;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-note summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #5f5343;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-note summary::before {
+      content: "▸";
+      margin-right: 0.6rem;
+      color: #a68972;
+      font-size: 1.1rem;
+    }
+
+    .faq-note details[open] summary::before {
+      content: "▾";
+    }
+
+    .faq-note details p {
+      margin: 0.6rem 0 0.2rem 1.6rem;
+      color: #5e554a;
+      font-size: 0.95rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid #d6cec1;
+      margin-top: 1rem;
+    }
+
+    .footer-note p {
+      font-size: 1rem;
+      color: #6e6559;
+    }
+
+    .footer-note .link-sentence {
+      background: #e7dfd4;
+      display: inline-block;
+      padding: 0.5rem 1.8rem;
+      border-radius: 30px;
+      margin-top: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .footer-note a {
+      color: #5f4a32;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b2947a;
+      transition: border-color 0.2s;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #4f3a28;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .backstory {
+        padding: 1.5rem 1.2rem;
+      }
+      .faq-note {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>mk体育</h1>
+    <div class="sub">运动，不止于竞技 · <em>视野与日常</em></div>
+  </div>
+
+  <section class="backstory">
+    <h2>从赛场到街巷：一种运动气质的蔓延</h2>
+    <p>体育从来不是孤立的记分牌与奖杯。它渗透在清晨公园的跑步声里，也闪烁在深夜球场最后一记投篮中。我们所谈论的「mk体育」，恰是这种介于专业与日常之间的张力——它关心赛事，也关心那些被汗水浸透的平凡时刻。</p>
+    <div class="quote-block">
+      “运动最动人的部分，往往不在聚光灯下，而在每一次重复的起落之间。”
+    </div>
+    <p>正是基于这样的理解，我们尝试用更平静的镜头去记录体育的另一种面貌：不是喧嚣的解说，不是夸张的数据，而是节奏、呼吸与持续。</p>
+  </section>
+
+  <div class="content-grid">
+    <div class="card">
+      <h3>节奏感 · 运动的底层语言</h3>
+      <p>无论是长跑者的步频，还是游泳者的划水间隔，节奏是运动中最不易察觉却至关重要的元素。它像一条暗河，在每一次发力与放松之间流动。很多爱好者起初只关注速度与力量，但慢慢会发现，真正让人坚持下来的，是身体找到的那个舒服的节拍。</p>
+      <p>在 <a href="https://mktopic.com.cn" style="color:#7d5e44; text-decoration: underline; text-underline-offset: 3px;">mk体育</a> 的日常讨论中，节奏常常成为一个安静却高频的词汇。它不追求瞬间爆发，而是倡导一种可持续的投入方式——这或许也是体育之于生活最温柔的隐喻。</p>
+    </div>
+
+    <div class="card">
+      <h3>场景感 · 从草地到屏幕</h3>
+      <p>体育的场景正在变得多元。有人在草坪上踢球，也有人在客厅跟着屏幕完成一次完整训练；有人喜欢雨中越野的泥泞，也有人偏爱瑜伽垫上的静默拉伸。每一种场景都值得被认真对待，因为它们共享同一个内核：身体与意识的对话。</p>
+      <div class="highlight-box">
+        <strong>一点观察：</strong> 很多运动习惯的养成，并不依赖昂贵的装备或特定场地，而是源于对某个小场景的重复与熟悉——比如每天傍晚同一段林荫路，或者睡前十分钟的拉伸。
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>连续性 · 比完美更重要</h3>
+      <p>我们见过太多因“准备充分再开始”而迟迟未动的计划。体育最朴素的智慧恰恰是：先做，再调整。一次不完美的训练远胜于一次完美的计划。连续三天的轻度活动，比单次高强度运动更能塑造长期的习惯曲线。</p>
+      <p>这也是「mk体育」所看重的一种态度：不鼓吹极限，不贩卖焦虑，只是安静地陪伴那些想要动起来的人，让他们在连续的小行动中找到自己的步调。</p>
+    </div>
+  </div>
+
+  <section class="faq-note">
+    <h3>一些常被提及的问题 · 摘要</h3>
+    <details>
+      <summary>为什么「mk体育」关注日常胜过赛事热点？</summary>
+      <p>因为赛事热点转瞬即逝，而日常运动习惯却能持续影响一个人的状态。我们更倾向于提供那些能融入生活的视角，而非仅仅追逐头条。</p>
+    </details>
+    <details>
+      <summary>刚开始运动，应该选择什么节奏？</summary>
+      <p>从你最能接受的频率开始，哪怕每周两次、每次二十分钟。关键是让身体适应“动起来”的状态，而不是一开始就追求时长或强度。</p>
+    </details>
+    <details>
+      <summary>怎样看待运动中的“瓶颈期”？</summary>
+      <p>瓶颈期往往是身体在重建适应的信号。这时候不需要焦虑，可以尝试调整运动形式、降低强度，或者干脆休息两三天——恢复本身也是训练的一部分。</p>
+    </details>
+  </section>
+
+  <div class="footer-note">
+    <p>在流动的生活里，找到属于自己的运动节奏</p>
+    <div class="link-sentence">
+      了解更多，可留意 <a href="https://mktopic.com.cn">mk体育</a> 的日常分享
+    </div>
+  </div>
+
+</body>
+</html>
